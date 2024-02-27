@@ -31,7 +31,7 @@
                     <td>{{$vuelo->destino}}</td>
                     <td>{{$vuelo->numeroAsientos}}</td>
                     <td>
-                        <a>Editar</a>
+                        <a href="{{route('vuelos.editar')}}">Editar</a>
                     </td>
                     <td>
                         <a>Eliminar</a>

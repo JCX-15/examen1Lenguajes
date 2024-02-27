@@ -29,7 +29,7 @@
                     </div>
                     <br>
                     <div class="form-group">
-                        <a class="btn btn-warning">Volver</a>
+                        <a class="btn btn-warning" href="{{route('vuelos.main')}}">Volver</a>
                         <button type="submit" class="btn btn-success">Guardar</button>
                     </div>
                 </form>

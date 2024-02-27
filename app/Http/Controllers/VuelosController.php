@@ -37,4 +37,7 @@ class VuelosController extends Controller
     public function agregarasientos($numeroVuelo){
         
     }
+    public function editarVuelo(){
+        return view('editarVuelo');
+    }
 }
