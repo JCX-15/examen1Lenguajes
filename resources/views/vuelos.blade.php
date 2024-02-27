@@ -37,7 +37,7 @@
                         <a>Eliminar</a>
                     </td>
                     <td>
-                        <a>Agregar Asiento</a>
+                        <a href="{{route('vuelos.asientos')}}">Agregar Asiento</a>
                     </td>
                     <td>
                         <a>Ver Asientos</a>

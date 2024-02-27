@@ -17,6 +17,8 @@ class VuelosController extends Controller
     }
 
     public function store(Request $request){
+        $vuelo = Vuelo::where("numeroVuelo","=",$request->input('nVuelo'))->get();
+        if ($vuelo->isEmpty()){
         $nvoVuelo = new Vuelo();
         $nvoVuelo->numeroVuelo = $request->input('nVuelo');
         $nvoVuelo->origen = $request->input('origen');
@@ -24,7 +26,15 @@ class VuelosController extends Controller
         $nvoVuelo->fechaSalida = $request->input('fecha');
         $nvoVuelo->numeroAsientos = $request->input('nasientos');
         $nvoVuelo->save();
-
         return redirect('/vuelos');
+        }else{
+            return redirect('/vuelos');
+        }
+    }
+    public function editarasientos(){
+        return view('agregarAsiento');
+    }    
+    public function agregarasientos($numeroVuelo){
+        
     }
 }

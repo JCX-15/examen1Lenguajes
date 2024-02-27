@@ -26,3 +26,5 @@ Route::post('/tipoAsientos/guardar', [TipoAsientosController::class,'store'])->n
 Route::get('/vuelos', [VuelosController::class,'vuelos'])->name('vuelos.main');
 Route::get('/vuelos/agregar', [VuelosController::class,'agregarvuelo'])->name('vuelos.create');
 Route::post('/vuelos/guardar', [VuelosController::class,'store'])->name('vuelos.save');
+Route::get('/vuelos/agregarasientos', [VuelosController::class,'vuelos'])->name('vuelos.asientos');
+Route::put('/vuelos/{numeroVuelo}', [VuelosController::class,'agregarasientos'])->name('vuelos.asientos.save');
